@@ -16,13 +16,11 @@ Many of the ideas presented here are a combination of what others have done, inc
 
     .
     ├── code-repos                     # Container for Git submodules for standalone services/apps
-    │   ├── template-service           # Git submodule for a sample service
     │   ├── foo-service                # Git submodule for a foo service
     │   ├── bar-service                # Git submodule for a bar service
     ├── config-repos                   # Container for Git submodules for Helm charts of services/apps
-    │   ├── template-service-config    # Git submodule for a sample service Helm chart
-    │   ├── foo-service-config         # Git submodule for a foo service Helm chart
-    │   ├── bar-service-config         # Git submodule for a bar service Helm chart
+    │   ├── foo-service-config         # Git submodule for a foo service K8s resources
+    │   ├── bar-service-config         # Git submodule for a bar service K8s resources
     ├── infrastructure                 # ARM templates to provision required Azure infrastructure
     │   ├── scripts                    # Helper scripts to deploy infrastructure
     ├── LICENSE
