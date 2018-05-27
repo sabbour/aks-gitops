@@ -51,13 +51,14 @@ There are some distinct features of this folder structure:
 
 This is split into smaller guides, so as to keep the size of this page manageable.
 
-- [Provision the infrastructure]()
-- [Creating a new service code and config](_docs/add-service-and-config.md)
-- [Using Gitflow to update service code and config]()
-- [Setting up CI code pipeline]()
-- [Setting up CI config pipeline]()
-- [Setting up CD config pipeline]()
-- [Testing the pipeline workflow (demo)]()
+- [Provision the infrastructure](_docs/provision-infrastructure.md)
+- [Creating a new service and config](_docs/add-service-and-config-github.md)
+- [Workflow to work with Git and pull requests](_docs/branch-pr-github.md)
+- [Setting up CI service code pipeline](_docs/ci-service-pipeline.md)
+- [Setting up CI config pipeline](_docs/ci-config-pipeline.md)
+- [Setting up CD config pipeline](_docs/cd-config-pipeline.md)
+- [Demo (testing the pipeline workflow)](_docs/demo.md)
+
 
 ## Areas of improvement
 
