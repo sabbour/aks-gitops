@@ -49,9 +49,15 @@ There are some distinct features of this folder structure:
 
 ## Guide
 
-This is split into smaller steps, so as to keep the size of this page manageable.
+This is split into smaller guides, so as to keep the size of this page manageable.
 
-- [Creating a new service and config](_docs/add-service-and-config.md)
+- [Provision the infrastructure]()
+- [Creating a new service code and config](_docs/add-service-and-config.md)
+- [Using Gitflow to update service code and config]()
+- [Setting up CI code pipeline]()
+- [Setting up CI config pipeline]()
+- [Setting up CD config pipeline]()
+- [Testing the pipeline workflow (demo)]()
 
 ## Areas of improvement
 
