@@ -1,0 +1,9 @@
+[submodule "code-repos/template-service"]
+	path = code-repos/template-service
+	url = https://github.com/sabbour/aks-gitops-template-service.git
+[submodule "config-repos/template-service-config"]
+	path = config-repos/template-service-config
+	url = https://github.com/sabbour/aks-gitops-template-service-config.git
+[submodule "infrastructure"]
+	path = infrastructure
+	url = https://github.com/sabbour/aks-gitops-infrastructure.git
