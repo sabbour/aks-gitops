@@ -40,11 +40,11 @@ There are some distinct features of this folder structure:
 
 1. For each microservice/app, using separate Git repositories for code and config
 
-    > The latest build of the application and what is deployed on the Kubernetes cluster are not necessarily the same thing. Storing both the source code and config (Helm charts or pure YAML) in the same repository strongly couples them together. If you need to change the configuration, to say, add a LoadBalancer, you will be potentially forced to do a full rebuild of the application's Docker image, tagging it with a new version and pushing it to the registry while the code didn't actually change. For that reason, I chose to host the config in its own repository. Also have a look at [this](https://blog.turbinelabs.io/deploy-not-equal-release-part-one-4724bc1e726b).
+    > The latest build of the application and what is deployed on the Kubernetes cluster are not necessarily the same thing. Storing both the source code and config (Helm charts or pure YAML) in the same repository strongly couples them together. If you need to change the configuration, to say, add a load balancer, you will be potentially forced to do a full rebuild of the application's Docker image, tagging it with a new version and pushing it to the registry while the code didn't actually change. For that reason, I chose to host the config in its own repository. Also have a look at [this](https://blog.turbinelabs.io/deploy-not-equal-release-part-one-4724bc1e726b).
 
 1. Use Infrastructure as Code to provision the cluster and related artifacts
 
-    > In the `infrastructure` folder, there are a bunch of Azure Resource Manager (ARM) templates that can be used to stand-up and update the infrastructure required (Kubernetes cluster, Azure Container Registry, Virtual Networks, etc.). In general, that is a good practice because it allows you to treat your infrastructure as cattle. If tomorrow you need to spin up in a new Azure Region, you can do so easily. If you go the extra mile and setup a Continuous Delivery pipeline on this folder, you can ensure that no infrastructure configuration drift can happen.
+    > In the `infrastructure` folder, there are a bunch of Azure Resource Manager (ARM) templates that can be used to stand-up and update the infrastructure required (Kubernetes cluster, Azure Container Registry, Virtual Networks, etc.). In general, that is a good practice because it allows you to treat your infrastructure as cattle. If tomorrow you need to spin up in a new Azure region, you can do so easily. If you go the extra mile and setup a Continuous Delivery pipeline on this folder, you can ensure that no infrastructure configuration drift can happen.
 
 ## Areas of improvement
 
