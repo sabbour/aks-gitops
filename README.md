@@ -57,7 +57,7 @@ There are some distinct features of this folder structure:
 
     > **Example:** `git submodule add https://github.com/sabbour/aks-gitops-color-service.git code-repos/color-service`
 
-Do the same for the configuration repositories.
+**Do the same for the configuration repositories:**
 
 1. [Create](https://github.com/new) a new Github repository for the service. Make sure to check the "Initialize with README" option to be able to clone this repo locally immediately
 
