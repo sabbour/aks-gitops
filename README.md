@@ -82,6 +82,8 @@ Below is an unordered checklist of areas I think could be improved/augmented in 
 
 - [ ] How to do integration testing?
 
+- [ ] Provision the infrastructure using ARM templates in the `infrastructure` folder
+
 ## Cloning this repository
 
 This repository uses [submodules](https://github.com/blog/2104-working-with-submodules).
