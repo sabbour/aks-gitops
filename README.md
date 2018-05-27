@@ -55,7 +55,7 @@ There are some distinct features of this folder structure:
 2. Add the new repository as a submodule using the Git clone URL into the `code-repos` folder
     ![Get Git clone URL](_docs/gitclone-url.png)
 
-    Example: `git submodule add https://github.com/sabbour/aks-gitops-color-service.git code-repos/color-service`
+    > **Example:** `git submodule add https://github.com/sabbour/aks-gitops-color-service.git code-repos/color-service`
 
 Do the same for the configuration repositories.
 
@@ -63,7 +63,7 @@ Do the same for the configuration repositories.
 
 2. Add the new repository as a submodule using the Git clone URL into the `config-repos` folder
 
-    Example: `git submodule add https://github.com/sabbour/aks-gitops-color-service.git code-repos/color-service-config`
+    > **Example:** `git submodule add https://github.com/sabbour/aks-gitops-color-service.git code-repos/color-service-config`
 
 ## Areas of improvement
 
