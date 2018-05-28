@@ -55,6 +55,6 @@ Once the Pull Request is reviewed and is ready for merging, merge and close the 
 Finally, delete the feature branch locally and remotely.
 
 ```sh
-git branch -d feature/coolnewfeature        # locally
+git branch -d feature/coolnewfeature                # locally
 git push origin --delete feature/coolnewfeature     # remotely
 ```
