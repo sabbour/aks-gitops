@@ -17,10 +17,9 @@ Many of the ideas presented here are a combination of what others have done, inc
     .
     ├── code-repos                     # Container for Git submodules for standalone services/apps
     │   ├── foo-service                # Git submodule for a foo service
+    │   │   ├── code                   # Source Code and Dockerfile for foo service
+    │   │   ├── config                 # Kubernetes config/Helm Charts for foo service
     │   ├── bar-service                # Git submodule for a bar service
-    ├── config-repos                   # Container for Git submodules for K8s resources of services/apps
-    │   ├── foo-service-config         # Git submodule for a foo service K8s resources
-    │   ├── bar-service-config         # Git submodule for a bar service K8s resources
     ├── infrastructure                 # ARM templates to provision required Azure infrastructure
     │   ├── scripts                    # Helper scripts to deploy infrastructure
     ├── LICENSE
@@ -36,9 +35,9 @@ There are some distinct features of this folder structure:
 
     > Allows you to have cleaner build pipelines per service without having to fiddle around with path filters in order to build only a specific folder when changes show up there. There are two schools here; mono repository and multiple repository. I chose the latter, but feel free to read and [make](https://medium.com/@somakdas/code-repository-for-micro-services-mono-repository-or-multiple-repositories-d9ad6a8f6e0e) [your](http://blog.shippable.com/our-journey-to-microservices-and-a-mono-repository) [own](http://www.gigamonkeys.com/mono-vs-multi/) choice.
 
-1. For each microservice/app, using separate Git repositories for code and config
+1. For each microservice/app, use a single Git repositoy for code and config
 
-    > The latest build of the application and what is deployed on the Kubernetes cluster are not necessarily the same thing. Storing both the source code and config (Helm charts or pure YAML) in the same repository strongly couples them together. If you need to change the configuration, to say, add a load balancer, you will be potentially forced to do a full rebuild of the application's Docker image, tagging it with a new version and pushing it to the registry while the code didn't actually change. For that reason, I chose to host the config in its own repository. Also have a look at [this](https://blog.turbinelabs.io/deploy-not-equal-release-part-one-4724bc1e726b).
+    > This keeps the pipeline simple because the build pipeline can bake the Helm chart corresponding to that new piece of code. A parallel build pipeline will also be created with a path filter targeting the config folder only to allow for the scenario to update the Helm chart without updating the Docker image.
 
 1. Use Infrastructure as Code to provision the cluster and related artifacts
 
@@ -56,7 +55,7 @@ After review of the pull request, when it gets merged with the `development` bra
 
 ![Merge build and release](_docs/img/gitops-2.gif)
 
-Now when it is time to do a production release, the developers cherry pick features they want to include in the master build, merge with `master` then trigger CD to `Staging` -> `Pre-Prod` -> `Prod`.
+Now when it is time to do a production release, the developers cherry pick features they want to include in the master build, merge with `master` then trigger CD to `Staging` -> `Pre-Prod` -> `Prod`.
 
 ![Merge build and release](_docs/img/gitops-3.gif)
 
