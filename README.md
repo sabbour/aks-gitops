@@ -44,6 +44,12 @@ There are some distinct features of this folder structure:
 
     > In the `infrastructure` folder, there are a bunch of Azure Resource Manager (ARM) templates that can be used to stand-up and update the infrastructure required (Kubernetes cluster, Azure Container Registry, Virtual Networks, etc.). In general, that is a good practice because it allows you to treat your infrastructure as cattle. If tomorrow you need to spin up in a new Azure region, you can do so easily. If you go the extra mile and setup a Continuous Delivery pipeline on this folder, you can ensure that no infrastructure configuration drift can happen.
 
+## Pipeline flow
+
+<video width="320" height="240" controls>
+  <source src="_docs/GitOps.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 
 ## Guide
 
