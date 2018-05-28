@@ -66,8 +66,7 @@ Release approvals and gates can be added between the release steps for governanc
 This is split into smaller guides, so as to keep the size of this page manageable.
 
 - [Provision the infrastructure](_docs/provision-infrastructure.md)
-- [Creating a new service/config and general Git flow](_docs/add-service-and-config-github.md)
-- [Workflow to work with Git and pull requests](_docs/branch-pr-github.md)
+- [Creating a new service/config and general Git flow work with Git and pull requests](_docs/add-service-and-config-github.md)
 - [Setting up CI service code pipeline](_docs/ci-service-pipeline.md)
 - [Setting up CI config pipeline](_docs/ci-config-pipeline.md)
 - [Setting up CD config pipeline](_docs/cd-config-pipeline.md)
