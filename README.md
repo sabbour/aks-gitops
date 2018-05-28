@@ -46,10 +46,21 @@ There are some distinct features of this folder structure:
 
 ## Pipeline flow
 
-<video width="320" height="240" controls>
-  <source src="_docs/img/GitOps.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+Developers work on their `feature` branches then they submit a Pull Request to the `development` branch.
+
+The pull request will trigger a build, test and create preview tagged Docker images and Helm chart with the pull request ID, which will get released to a temporary Kubernetes namespace.
+
+![Pull Request build](_docs/img/gitops-1.gif)
+
+After review of the pull request, when it gets merged with the `development` branch. This will run the build pipeline again to generate the merged Docker image, Helm chart, etc. and release to `Development` environment.
+
+![Merge build and release](_docs/img/gitops-2.gif)
+
+Now when it is time to do a production release, the developers cherry pick features they want to include in the master build, merge with `master` then trigger CD to `Staging` -> `Pre-Prod` -> `Prod`.
+
+![Merge build and release](_docs/img/gitops-3.gif)
+
+Release approvals and gates can be added between the release steps for governance.
 
 ## Guide
 
