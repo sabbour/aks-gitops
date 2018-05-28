@@ -47,7 +47,7 @@ There are some distinct features of this folder structure:
 ## Pipeline flow
 
 <video width="320" height="240" controls>
-  <source src="_docs/GitOps.mp4" type="video/mp4">
+  <source src="_docs/img/GitOps.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
