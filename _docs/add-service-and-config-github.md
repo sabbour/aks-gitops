@@ -2,15 +2,17 @@
 
 This guide assumes you want to host your code on GitHub and build using Team Services. You can also follow that guide to [host your code and build it on Team Services (work in progress)]().
 
-For each new service/application you want to build and configure to run on your Kubernetes cluster, you need to do the workflow below.
-
 ## Install Helm starter chart
 
 To make deploying the boilerplate template code easier, I've created a Git repository with a Helm starter chart corresponding to my preferred boiler plate. 
 
 Install the starter chart by following the instructions here: [https://github.com/sabbour/aks-gitops-startercharts](https://github.com/sabbour/aks-gitops-startercharts)
 
+> This is done once per development environment.
+
 ## Creating a new service
+
+For each new service/application you want to build and configure to run on your Kubernetes cluster, you need to do the workflow below.
 
 Assuming you want to create a new microservice called `color-service`:
 
