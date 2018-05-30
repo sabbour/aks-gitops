@@ -79,13 +79,11 @@ Below is an unordered checklist of areas I think could be improved/augmented in 
 
 - [ ] Document the *inner loop* of the developer's experience and integrate [Azure Dev Spaces](https://docs.microsoft.com/en-us/azure/dev-spaces/azure-dev-spaces)
 
-- [ ] Automatically creating Kubernetes environments (namespaces) for Pull Request
-
 - [ ] Integrating with the AKS HTTP Application Routing to create DNS names per environment (prod, dev, feature).
 
-- [ ] Add container security scanning solutions into the pipeline ([clair](https://github.com/coreos/clair), [anchore](https://anchore.freshdesk.com/support/solutions/articles/36000060726-installing-anchore-using-helm), [microscanner](https://github.com/aquasecurity/microscanner))
+- [ ] "ChatOps"..Slack or Microsoft Teams integration
 
-- [ ] [Best practices](https://blogs.msdn.microsoft.com/stevelasker/2018/03/01/docker-tagging-best-practices-for-tagging-and-versioning-docker-images/) for Docker image tagging
+- [ ] Add container security scanning solutions into the pipeline ([clair](https://github.com/coreos/clair), [anchore](https://anchore.freshdesk.com/support/solutions/articles/36000060726-installing-anchore-using-helm), [microscanner](https://github.com/aquasecurity/microscanner))
 
 - [ ] Pulling secrets from Azure Key Vault and [injecting them during the release pipeline](https://docs.microsoft.com/en-us/vsts/build-release/concepts/library/variable-groups?view=vsts)
 
