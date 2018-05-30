@@ -18,7 +18,7 @@ Many of the ideas presented here are a combination of what others have done, inc
     ├── code-repos                     # Container for Git submodules for standalone services/apps
     │   ├── foo-service                # Git submodule for a foo service
     │   │   ├── code                   # Source Code and Dockerfile for foo service
-    │   │   ├── config                 # Kubernetes config/Helm Charts for foo service
+    │   │   ├── charts                 # Helm Charts for foo service
     │   ├── bar-service                # Git submodule for a bar service
     ├── infrastructure                 # ARM templates to provision required Azure infrastructure
     │   ├── scripts                    # Helper scripts to deploy infrastructure
@@ -66,7 +66,7 @@ Release approvals and gates can be added between the release steps for governanc
 This is split into smaller guides, so as to keep the size of this page manageable.
 
 - [Provision the infrastructure](_docs/provision-infrastructure.md)
-- [Creating a new service/config and general Git flow work with Git and pull requests](_docs/add-service-and-config-github.md)
+- [Creating a new service/chart and general Git flow work with Git and pull requests](_docs/add-service-and-config-github.md)
 - [Setting up CI/CD pull request pipeline](_docs/cicd-pullrequest-pipeline.md) (work in progress)
 - [Setting up CI/CD service code and/or config pipeline](_docs/cicd-codeandconfig-pipeline.md) (work in progress)
 - [Demo (testing the pipeline workflow)](_docs/demo.md) (work in progress)
@@ -76,6 +76,8 @@ This is split into smaller guides, so as to keep the size of this page manageabl
 This space is rapidly moving and new tools and best practices keep popping up. The intention is to try and keep this up to date and as relevant as possible.
 
 Below is an unordered checklist of areas I think could be improved/augmented in this pipeline:
+
+- [ ] Creating a YeoMan Generator to create the boiler plate microservice folder structure with placeholder Helm chart and code folder
 
 - [ ] Document the *inner loop* of the developer's experience and integrate [Azure Dev Spaces](https://docs.microsoft.com/en-us/azure/dev-spaces/azure-dev-spaces)
 
