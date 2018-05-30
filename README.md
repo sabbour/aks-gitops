@@ -8,7 +8,7 @@ When it comes to setting up a Continuous Integration/Continuous Delivery pipelin
 
 This repository is yet another opinionated way of setting this up, that's to say, there are surely better/smarter ways to do this, and you might not agree to this pipeline. Not all of the below might be applicable to your project and feel free to adapt it to your needs.
 
-Many of the ideas presented here are a combination of what others have done, including [Weaveworks](https://www.weave.works/blog/gitops-operations-by-pull-request) and [Jenkins X](https://jenkins.io/blog/2018/03/19/introducing-jenkins-x/) but are adopted to use Microsoft Azure native services such as [Azure Container Service Build](https://docs.microsoft.com/en-us/azure/container-registry/container-registry-build-overview) and [Team Services](https://www.visualstudio.com/team-services/).
+Many of the ideas presented here are a combination of what others have done, including [Weaveworks](https://www.weave.works/blog/gitops-operations-by-pull-request) and [Jenkins X](https://jenkins.io/blog/2018/03/19/introducing-jenkins-x/) but are adopted to use Microsoft Azure native services such as [Team Services](https://www.visualstudio.com/team-services/).
 
  I'm open to discussion and feedback so please open an issue if you need to discuss.
 
@@ -67,10 +67,10 @@ This is split into smaller guides, so as to keep the size of this page manageabl
 
 - [Provision the infrastructure](_docs/provision-infrastructure.md)
 - [Creating a new service/config and general Git flow work with Git and pull requests](_docs/add-service-and-config-github.md)
-- [Setting up CI service code pipeline](_docs/ci-service-pipeline.md)
-- [Setting up CI config pipeline](_docs/ci-config-pipeline.md)
-- [Setting up CD config pipeline](_docs/cd-config-pipeline.md)
-- [Demo (testing the pipeline workflow)](_docs/demo.md)
+- [Setting up CI service code pipeline](_docs/ci-service-pipeline.md) (work in progress)
+- [Setting up CI config pipeline](_docs/ci-config-pipeline.md) (work in progress)
+- [Setting up CD config pipeline](_docs/cd-config-pipeline.md) (work in progress)
+- [Demo (testing the pipeline workflow)](_docs/demo.md) (work in progress)
 
 ## Areas of improvement
 
