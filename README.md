@@ -67,9 +67,8 @@ This is split into smaller guides, so as to keep the size of this page manageabl
 
 - [Provision the infrastructure](_docs/provision-infrastructure.md)
 - [Creating a new service/config and general Git flow work with Git and pull requests](_docs/add-service-and-config-github.md)
-- [Setting up CI service code pipeline](_docs/ci-service-pipeline.md) (work in progress)
-- [Setting up CI config pipeline](_docs/ci-config-pipeline.md) (work in progress)
-- [Setting up CD config pipeline](_docs/cd-config-pipeline.md) (work in progress)
+- [Setting up CI/CD pull request pipeline](_docs/cicd-pullrequest-pipeline.md) (work in progress)
+- [Setting up CI/CD service code and/or config pipeline](_docs/cicd-codeandconfig-pipeline.md) (work in progress)
 - [Demo (testing the pipeline workflow)](_docs/demo.md) (work in progress)
 
 ## Areas of improvement
