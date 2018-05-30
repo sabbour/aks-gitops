@@ -77,8 +77,6 @@ This space is rapidly moving and new tools and best practices keep popping up. T
 
 Below is an unordered checklist of areas I think could be improved/augmented in this pipeline:
 
-- [ ] Creating a YeoMan Generator to create the boiler plate microservice folder structure with placeholder Helm chart and code folder
-
 - [ ] Document the *inner loop* of the developer's experience and integrate [Azure Dev Spaces](https://docs.microsoft.com/en-us/azure/dev-spaces/azure-dev-spaces)
 
 - [ ] "ChatOps"..Slack or Microsoft Teams integration
