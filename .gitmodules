@@ -4,6 +4,3 @@
 [submodule "code-repos/color-service"]
 	path = code-repos/color-service
 	url = https://github.com/sabbour/aks-gitops-color-service.git
-[submodule "starter-charts"]
-	path = starter-charts
-	url = https://github.com/sabbour/aks-gitops-startercharts.git
