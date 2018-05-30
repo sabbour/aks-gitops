@@ -79,8 +79,6 @@ Below is an unordered checklist of areas I think could be improved/augmented in 
 
 - [ ] Document the *inner loop* of the developer's experience and integrate [Azure Dev Spaces](https://docs.microsoft.com/en-us/azure/dev-spaces/azure-dev-spaces)
 
-- [ ] Integrating with the AKS HTTP Application Routing to create DNS names per environment (prod, dev, feature).
-
 - [ ] "ChatOps"..Slack or Microsoft Teams integration
 
 - [ ] Add container security scanning solutions into the pipeline ([clair](https://github.com/coreos/clair), [anchore](https://anchore.freshdesk.com/support/solutions/articles/36000060726-installing-anchore-using-helm), [microscanner](https://github.com/aquasecurity/microscanner))
