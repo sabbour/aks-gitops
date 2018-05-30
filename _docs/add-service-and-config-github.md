@@ -4,7 +4,10 @@ This guide assumes you want to host your code on GitHub and build using Team Ser
 
 For each new service/application you want to build and configure to run on your Kubernetes cluster, you need to do the workflow below.
 
-Assuming you want to create a new microservice called `color-service`, you will need to create a Git repository to host its code under `code-repos\color-service\code`. For the Kubernetes config, you'll need to create that under `code-repos\color-service\config`.
+Assuming you want to create a new microservice called `color-service`:
+
+- You will need to create a Git repository to host its code under `code-repos\color-service\code`.
+- For the Kubernetes config, you'll need to create that under `code-repos\color-service\config`.
 
 Finally, you'll setup some git branches to do some proper governance of code loosely based on what is [documented here](https://docs.microsoft.com/en-us/vsts/git/concepts/git-branching-guidance?view=vsts).
 
