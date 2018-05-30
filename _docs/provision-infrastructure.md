@@ -12,7 +12,7 @@ az group create -n "aks-gitops-rg" -l "eastus"
 
 ## Azure Kubernetes Service (AKS)
 
-At the time of writing, to make use of the new features such as monitoring integration, HTTP application routing and custom vnets, you need to either use the portal or deploy using an ARM template.
+> At the time of writing, to make use of the new features such as monitoring integration, HTTP application routing and custom VNETs, you need to either use the portal or deploy using an ARM template.
 
 We're not going to rehash existing documentation, so just [follow the walkthrough](https://docs.microsoft.com/en-us/azure/aks/kubernetes-walkthrough-portal) to create a new AKS cluster. Make sure to select the same **Resource Group** and **Location** specified earlier.
 
