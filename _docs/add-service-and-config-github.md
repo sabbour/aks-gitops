@@ -94,3 +94,5 @@ Finally, delete the feature branch locally and remotely.
 git branch -d feature/coolnewfeature                # locally
 git push origin --delete feature/coolnewfeature     # remotely
 ```
+
+> Next: Follow the next part of the guide to [setup the pull request pipeline](_docs/cicd-pullrequest-pipeline.md).

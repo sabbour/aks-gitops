@@ -45,7 +45,7 @@ There are some distinct features of this folder structure:
 
 ## Pipeline flow
 
-Developers work on their `feature` branches then they submit a Pull Request to the `development` branch.
+Developers work on their `feature` branches (in their own fork) then they submit a Pull Request to the `development` branch.
 
 The pull request will trigger a build, test and create preview tagged Docker images and Helm chart with the pull request ID, which will get released to a temporary Kubernetes namespace.
 

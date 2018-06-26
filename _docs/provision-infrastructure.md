@@ -2,7 +2,7 @@
 
 ## Resource Group
 
-> At the time of writing, AKS is in preview and is available in select regions so please choose a [supported preview region](https://github.com/Azure/AKS/blob/master/preview_regions.md).
+> Please check the [quotas and region availability for Azure Kubernetes Service (AKS)](https://docs.microsoft.com/en-us/azure/aks/container-service-quotas) page to select a region where AKS is supported.
 
 Create a new Resource Group using the Azure Portal or use the Azure CLI
 
@@ -12,11 +12,7 @@ az group create -n "aks-gitops-rg" -l "eastus"
 
 ## Azure Kubernetes Service (AKS)
 
-> At the time of writing, to make use of the new features such as monitoring integration, HTTP application routing and custom VNETs, you need to either use the portal or deploy using an ARM template.
-
-We're not going to rehash existing documentation, so just [follow the walkthrough](https://docs.microsoft.com/en-us/azure/aks/kubernetes-walkthrough-portal) to create a new AKS cluster. Make sure to select the same **Resource Group** and **Location** specified earlier.
-
-You don't need to run the application in the walkthrough.
+Please [follow the walkthrough](https://docs.microsoft.com/en-us/azure/aks/http-application-routing) to create a new AKS cluster with HTTP Application Routing enabled. Make sure to select the same **Resource Group** and **Location** specified earlier.
 
 ## Azure Container Registry (ACR)
 
@@ -24,6 +20,16 @@ Create the Azure Container Registry using the Azure Portal or use the Azure CLI.
 
 ```sh
 az acr create --resource-group "aks-gitops-rg" --name "aks-gitops-acr" --sku "Standard" --location "eastus"
+```
+
+## Create trust between the AKS cluster and ACR
+
+To establish trust between an AKS cluster and an ACR registry, you modify the Azure Active Directory Service Prinicipal used with AKS by adding the `Contributor` role to it with the scope of the ACR repository. To do so, run the following commands, replacing `<aks-rg-name>` and `<aks-cluster-name>` with the resource group and name of your AKS cluster, and `<acr-rg-nam>` and `<acr-repo-name>` with the resource group and repository name of your ACR repository with which you want to create trust.
+
+```sh
+export AKS_SP_ID=$(az aks show -g <aks-rg-name> -n <aks-cluster-name> --query "servicePrincipalProfile.clientId" -o tsv)
+export ACR_RESOURCE_ID=$(az acr show -g <acr-rg-name> -n <acr-repo-name> --query "id" -o tsv)
+az role assignment create --assignee $AKS_SP_ID --scope $ACR_RESOURCE_ID --role contributor
 ```
 
 ## Visual Studio Team Service (VSTS)
