@@ -31,5 +31,5 @@ Optional but recommended, change the build agent queue to be **Hosted Linux Prev
 
 Start adding the tasks, starting with Docker to build the image.
 
-$(Build.SourceBranchName)-$(Build.Reason)-$(Build.SourceVersion)
-master-IndividualCI-3sdr3
+$(Build.SourceBranchName)-$(Build.Reason)-$(Build.SourceVersion)-$(Rev:.r)
+master-IndividualCI-3sdr3-1
